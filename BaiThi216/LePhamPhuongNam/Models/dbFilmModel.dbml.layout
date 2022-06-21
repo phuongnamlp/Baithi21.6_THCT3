@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="dbFilmModel">
+  <DataContextMoniker Name="/dbFilmModelDataContext" />
+  <nestedChildShapes>
+    <classShape Id="3ce3fa20-7f3a-43df-ba47-766cc20321ef" absoluteBounds="6.25, 1.25, 2, 1.3862939453125">
+      <DataClassMoniker Name="/dbFilmModelDataContext/ChiTiet" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4f83ffdc-7457-432e-a702-f86f0d9e3d91" absoluteBounds="6.265, 1.71, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="eba83610-9695-42ed-b1d0-0190077de44e" absoluteBounds="0.75, 1, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/dbFilmModelDataContext/Phim" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6edb07aa-02b9-4dce-9044-e49bd8948f8c" absoluteBounds="0.765, 1.46, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e2ca6e1a-a488-4d0a-8ca2-a9c1b63c7d8e" absoluteBounds="3.5, 4.25, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/dbFilmModelDataContext/HoaDon" />
+      <nestedChildShapes>
+        <elementListCompartment Id="05144077-5690-442c-83e0-aa53962a061f" absoluteBounds="3.515, 4.71, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4871b12a-4213-4c96-b03d-4dfca269e966" absoluteBounds="0.75, 4, 2, 1.7708968098958326">
+      <DataClassMoniker Name="/dbFilmModelDataContext/KhachHang" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c3fa0c80-0dc5-4033-bf94-99b0bac3539d" absoluteBounds="0.765, 4.46, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ff9af1ce-b492-4960-af75-945ed3a7d23e" absoluteBounds="3.5, 0.875, 2, 1.9631982421875">
+      <DataClassMoniker Name="/dbFilmModelDataContext/LichChieu" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0dae39dd-a567-488e-8fce-5fec21376797" absoluteBounds="3.515, 1.335, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.5 : 4.94314697265625); (7.25 : 4.94314697265625); (7.25 : 2.6362939453125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/dbFilmModelDataContext/HoaDon/HoaDon_ChiTiet" />
+      <nodes>
+        <classShapeMoniker Id="e2ca6e1a-a488-4d0a-8ca2-a9c1b63c7d8e" />
+        <classShapeMoniker Id="3ce3fa20-7f3a-43df-ba47-766cc20321ef" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 4.94314697265625); (3.5 : 4.94314697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/dbFilmModelDataContext/KhachHang/KhachHang_HoaDon" />
+      <nodes>
+        <classShapeMoniker Id="4871b12a-4213-4c96-b03d-4dfca269e966" />
+        <classShapeMoniker Id="e2ca6e1a-a488-4d0a-8ca2-a9c1b63c7d8e" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 1.94314697265625); (6.25 : 1.94314697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/dbFilmModelDataContext/LichChieu/LichChieu_ChiTiet" />
+      <nodes>
+        <classShapeMoniker Id="ff9af1ce-b492-4960-af75-945ed3a7d23e" />
+        <classShapeMoniker Id="3ce3fa20-7f3a-43df-ba47-766cc20321ef" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 1.88544840494792); (3.5 : 1.88544840494792)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/dbFilmModelDataContext/Phim/Phim_LichChieu" />
+      <nodes>
+        <classShapeMoniker Id="eba83610-9695-42ed-b1d0-0190077de44e" />
+        <classShapeMoniker Id="ff9af1ce-b492-4960-af75-945ed3a7d23e" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

@@ -1,0 +1,38 @@
+﻿@model IEnumerable<LePhamPhuongNam.Models.Phim>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+<h2>Danh Sách Phim</h2>
+<div class="row">
+    @foreach (var item in Model)
+    {
+        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+            <div class="panel panel-default">
+                <div class="panel panel-heading">
+                    <strong>@item.tenphim</strong>
+                </div>
+                <div class="panel-body">
+                    <p><strong>Đạo Diễn : </strong>@item.daodien</p>
+                    <p><img src="@item.hinh" width="270" alt="thumnail" /></p>
+                    <p><strong>Ngày Chiếu : </strong>@item.ngaychieu</p>
+                </div>
+                <div class="panel-footer clearfix">
+                    <div class="pull-right">
+                        @if (item.ngaychieu > DateTime.Now)
+                        {
+                            <a class="btn btn-warning">Sắp Chiếu</a>
+                        }
+                        else
+                        {
+                            <a class="btn btn-success">Đặt Vé</a>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+    
+</div>

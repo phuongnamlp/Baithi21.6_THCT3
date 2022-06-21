@@ -1,0 +1,73 @@
+﻿@model IEnumerable<LePhamPhuongNam.Models.LichChieu>
+
+@{
+    ViewBag.Title = "ListFilm";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>ListFilm</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.Label("Mã Lịch")
+        </th>
+        <th>
+            @Html.Label("Mã Phim")
+        </th>
+        <th>
+            @Html.Label("Ngày Chiếu")
+       </th>
+        <th>
+            @Html.Label("Giờ Chiếu")
+        </th>
+        <th>
+            @Html.Label("Giá vé")
+        </th>
+        <th>
+            @Html.Label("Số Lượng")
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.malich)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.maphim)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ngay)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.gio)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.gia)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.soluong)
+        </td>
+        <td>
+            <div class="SapChieu">
+                @if (item.soluong == 0)
+                {
+                    <a class="btn btn-warning">Hết Vé</a>
+                }
+                else
+                {
+                    <div class="DatMua">
+                        <a class="btn btn-success" href="@Url.Action("ThemGioHang","GioHang",new {@malich = item.malich,@strURL = Request.Url.ToString()} )">Đặt Mua</a>
+                    </div>
+                }
+            </div>
+        </td>
+    </tr>
+}
+
+</table>
